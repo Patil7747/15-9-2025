@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Find Max</title></head>
+<body>
+  <h2>Find Maximum</h2>
+  <input id="arr" type="text" placeholder="">
+  <button onclick="findMax()">Find</button>
+  <p id="output"></p>
+
+<script>
+function findMax() {
+  let arr = document.getElementById("arr").value.split(",").map(Number);
+  let max = Math.max(...arr);
+  document.getElementById("output").innerText = "Max: " + max;
+}
+</script>
+</body>
+</html>

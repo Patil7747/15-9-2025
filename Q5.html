@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reverse Words</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Function: Reverse Words</h1>
+<script>
+    function reverseWord(sentence) {
+      
+        let words = sentence.split(" ");
+        let reversed = words.reverse();
+        return reversed.join(" ");
+    }
+
+    document.write(reverseWord("I love javascript"));
+</script>
+</body>
+</html>

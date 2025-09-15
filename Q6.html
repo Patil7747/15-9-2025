@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Factorial</title></head>
+<body>
+  <h2>Factorial</h2>
+  <input id="num" type="number" placeholder="">
+  <button onclick="factorial()">Compute</button>
+  <p id="output"></p>
+
+<script>
+function factorial() {
+  let n = parseInt(document.getElementById("num").value);
+  let res = 1;
+  for(let i=2;i<=n;i++) res*=i;
+  document.getElementById("output").innerText = "Factorial: " + res;
+}
+</script>
+</body>
+</html>

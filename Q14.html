@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Guessing Game</title></head>
+<body>
+  <h2>Guessing Game</h2>
+  <input id="guess" type="number" placeholder="">
+  <button onclick="play()">Guess</button>
+  <p id="output"></p>
+
+<script>
+let number=Math.floor(Math.random()*10)+1;
+function play(){
+  let g=parseInt(document.getElementById("guess").value);
+  document.getElementById("output").innerText = g===number ? "You won!" : "Try again. Number was: "+number;
+  number=Math.floor(Math.random()*10)+1; 
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>ATM Simulation</title></head>
+<body>
+  <h2>ATM Simulation</h2>
+  <button onclick="atm('deposit')">Deposit 100</button>
+  <button onclick="atm('withdraw')">Withdraw 100</button>
+  <button onclick="atm('check')">Check Balance</button>
+  <p id="output"></p>
+
+<script>
+let balance=1000;
+function atm(action){
+  switch(action){
+    case "deposit": balance+=100; break;
+    case "withdraw": balance-=100; break;
+    case "check": break;
+  }
+  document.getElementById("output").innerText="Balance: "+balance;
+}
+</script>
+</body>
+</html>

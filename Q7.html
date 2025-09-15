@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fibonacci</title></head>
+<body>
+  <h2>Fibonacci Series</h2>
+  <input id="num" type="number" placeholder="">
+  <button onclick="fibonacci()">Generate</button>
+  <p id="output"></p>
+
+<script>
+function fibonacci() {
+  let n = parseInt(document.getElementById("num").value);
+  let seq = [0,1];
+  while(seq.length<n) seq.push(seq[seq.length-1]+seq[seq.length-2]);
+  document.getElementById("output").innerText = "Series: " + seq.slice(0,n).join(", ");
+}
+</script>
+</body>
+</html>

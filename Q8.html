@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Duplicates</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Function: Remove Duplicates</h1>
+<script>
+    function removeDuplicates(arr) {
+        return [...new Set(arr)]; //
+    }
+
+    var arr = [1,2,2,3,4,4,5];
+    var unique = removeDuplicates(arr);
+
+    document.write("unique = " + unique);
+</script>
+</body>
+</html>

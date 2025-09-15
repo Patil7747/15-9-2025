@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Prime Check</title></head>
+<body>
+  <h2>Prime Number Check</h2>
+  <input id="num" type="number" placeholder="">
+  <button onclick="isPrime()">Check</button>
+  <p id="output"></p>
+
+<script>
+function isPrime(){
+  let n=parseInt(document.getElementById("num").value);
+  if(n<=1) return document.getElementById("output").innerText="Not Prime";
+  for(let i=2;i<=Math.sqrt(n);i++) if(n%i===0) return document.getElementById("output").innerText="Not Prime";
+  document.getElementById("output").innerText="Prime";
+}
+</script>
+</body>
+</html>

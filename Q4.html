@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Word Counter</h3>
+<p id="wordResult"></p>
+<script>
+function wordCounter(sentence){
+  let words = sentence.split(" ");
+  let count = {};
+  words.forEach(w=>{
+    count[w] = (count[w]||0)+1;
+  });
+  return count;
+}
+
+let result = wordCounter("I love JavaScript and JavaScript likes me");
+let display = "";
+for (let word in result){
+  display += word + " : " + result[word] + "<br>";
+}
+document.getElementById("wordResult").innerHTML = display;
+</script>
+</body>
+</html>

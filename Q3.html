@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Even Odd</title></head>
+<body>
+  <h2>Even & Odd</h2>
+  <input id="arr" type="text" placeholder="">
+  <button onclick="separateEvenOdd()">Separate</button>
+  <p id="output"></p>
+
+<script>
+function separateEvenOdd() {
+  let arr = document.getElementById("arr").value.split(",").map(Number);
+  let even = arr.filter(x=>x%2===0);
+  let odd = arr.filter(x=>x%2!==0);
+  document.getElementById("output").innerText = "Even: " + even + " | Odd: " + odd;
+}
+</script>
+</body>
+</html>

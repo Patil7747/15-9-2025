@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sorting</title></head>
+<body>
+  <h2>Sorting Numbers</h2>
+  <input id="arr" type="text" placeholder="">
+  <button onclick="sortArray()">Sort</button>
+  <p id="output"></p>
+
+<script>
+function sortArray(){
+  let arr=document.getElementById("arr").value.split(",").map(Number);
+  let asc=[...arr].sort((a,b)=>a-b);
+  let desc=[...arr].sort((a,b)=>b-a);
+  document.getElementById("output").innerText="Ascending: "+asc+" | Descending: "+desc;
+}
+</script>
+</body>
+</html>

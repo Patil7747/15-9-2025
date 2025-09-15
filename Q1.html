@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Array Sum</title></head>
+<body>
+  <h2>Array Sum</h2>
+  <input id="arr" type="text" placeholder="">
+  <button onclick="sumArray()">Sum</button>
+  <p id="output"></p>
+
+<script>
+function sumArray() {
+  let arr = document.getElementById("arr").value.split(",").map(Number);
+  let sum = arr.reduce((a,b)=>a+b,0);
+  document.getElementById("output").innerText = "Sum: " + sum;
+}
+</script>
+</body>
+</html>
